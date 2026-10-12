@@ -21,10 +21,20 @@ cask "dictator" do
   zap trash: "~/.config/dictator"
 
   caveats <<~EOS
-    Dictator isn't notarized by Apple yet. On first launch macOS will block it:
-    open System Settings → Privacy & Security and click "Open Anyway" (once).
+    First launch (one time only):
 
-    Then add your OpenRouter API key in the Settings window that opens,
-    and press ⌥D anywhere to dictate.
+    1. Open Dictator from Applications. macOS blocks it because it isn't
+       notarized by Apple yet: click "Done" (not "Move to Trash").
+    2. Open System Settings → Privacy & Security, scroll down to Security
+       and click "Open Anyway" next to "Dictator" was blocked. The button
+       only appears after step 1, for about an hour. Confirm, then click Open.
+    3. Paste your OpenRouter API key (openrouter.ai/keys) in the Settings
+       window, click Check, then Save.
+    4. Allow the Microphone when asked.
+    5. To have text typed for you, turn Dictator on in System Settings →
+       Privacy & Security → Accessibility. Without it, text is copied and
+       you press ⌘V.
+
+    Then press ⌥D anywhere to dictate. Upgrades keep these permissions.
   EOS
 end
