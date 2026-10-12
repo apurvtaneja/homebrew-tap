@@ -1,6 +1,6 @@
 cask "dictator" do
-  version "2.1.0"
-  sha256 "a646795a070b88d4bc99f6a3888dd5d8bcbbf728cabcfb2295b944bbafbc86b7"
+  version "2.2.0"
+  sha256 "631f3b51b100f7249f6b7bcee662938605b1a844499c9352bf9a74f00c1dd72f"
 
   url "https://github.com/apurvtaneja/dictator/releases/download/v#{version}/Dictator-#{version}.zip"
   name "Dictator"
